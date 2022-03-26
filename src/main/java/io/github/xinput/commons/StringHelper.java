@@ -39,9 +39,6 @@ public class StringHelper extends StringUtils {
 
   /**
    * 判断字符串是否为空, "null"这里也认为是空
-   *
-   * @param value
-   * @return
    */
   public static boolean isNullOrEmpty(String value) {
     if (isEmpty(value)) {
@@ -57,9 +54,6 @@ public class StringHelper extends StringUtils {
 
   /**
    * 判断字符串是否不为空
-   *
-   * @param value
-   * @return
    */
   public static boolean isNotNullOrEmpty(String value) {
     return !isNullOrEmpty(value);

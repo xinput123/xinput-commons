@@ -14,7 +14,6 @@ import java.util.List;
 
 /**
  * @author xinput
- * @date 2020-07-31 13:56
  */
 public class LocalDateUtils {
 
@@ -115,7 +114,6 @@ public class LocalDateUtils {
    *
    * @param beginDate 起始日期
    * @param endDate   结束日期
-   * @return
    */
   public static List<LocalDate> getMiddleLocalDate(LocalDate beginDate, LocalDate endDate) {
     if (endDate.isBefore(beginDate)) {
@@ -174,7 +172,6 @@ public class LocalDateUtils {
    *
    * @param date1
    * @param date2
-   * @return
    */
   public static boolean isEqual(LocalDate date1, LocalDate date2) {
     if (date1 == null && date2 == null) {
@@ -192,7 +189,6 @@ public class LocalDateUtils {
    * 根据出生日期计算年龄
    *
    * @param birthday
-   * @return
    */
   public static Integer calculateAge(LocalDate birthday) {
     if (birthday == null) {

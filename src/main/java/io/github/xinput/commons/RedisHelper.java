@@ -22,7 +22,6 @@ import java.util.function.Function;
 /**
  * @author <a href="mailto:fivesmallq@gmail.com">fivesmallq</a>
  * @version Revision: 1.0
- * @date 16/8/13 下午4:36
  */
 public class RedisHelper {
 

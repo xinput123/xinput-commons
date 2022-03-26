@@ -196,7 +196,6 @@ public class HttpUtils {
    * @param params  请求参数,拼接在url后面
    * @param headers header请求头信息
    * @param charset 默认编解码
-   * @return
    */
   public static String get(String url, Map<String, Object> params, List<Map<String, String>> headers, Charset charset) throws IOException {
     if (charset == null) {
@@ -267,7 +266,6 @@ public class HttpUtils {
    * @param params  body中参数
    * @param headers 自定义header
    * @param charset 编码格式
-   * @return
    * @throws IOException
    */
   public static String put(String url, Object params, List<Map<String, String>> headers, Charset charset) throws IOException {
@@ -313,8 +311,6 @@ public class HttpUtils {
    * @param params  url后参数
    * @param headers 自定义header
    * @param charset 编码格式
-   * @return
-   * @throws IOException
    */
   public static String delete(String url, Map<String, Object> params, List<Map<String, String>> headers, Charset charset) throws IOException {
     if (charset == null) {

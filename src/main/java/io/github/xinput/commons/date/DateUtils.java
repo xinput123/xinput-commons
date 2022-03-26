@@ -165,7 +165,6 @@ public class DateUtils extends DateFormatUtils {
    *
    * @param date1
    * @param date2
-   * @return
    */
   public static int betweenDays(Date date1, Date date2) {
     return Math.abs(differentDays(date1, date2));

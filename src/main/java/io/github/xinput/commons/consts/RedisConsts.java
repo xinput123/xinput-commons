@@ -4,7 +4,6 @@ package io.github.xinput.commons.consts;
  * redis配置文件
  *
  * @author xinput
- * @date 2020-06-17 19:18
  */
 public class RedisConsts {
   public static final String CONF_FILE = "redis.properties";

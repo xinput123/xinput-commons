@@ -5,7 +5,6 @@ package io.github.xinput.commons.exception;
  *
  * @author <a href="mailto:fivesmallq@gmail.com">fivesmallq</a>
  * @version Revision: 1.0
- * @date 2016-1-13下午4:10:07
  */
 public class TypeException extends RuntimeException {
 

@@ -24,7 +24,6 @@ import java.util.stream.Stream;
 /**
  * @author xinput
  * @version 1.0
- * @date 2019-02-13
  * @see LambdaUtilsDemo
  */
 public class LambdaUtils {
@@ -35,7 +34,6 @@ public class LambdaUtils {
    *
    * @param collection List<User>
    * @param function   User::getName
-   * @return
    */
   public static <R, A> List<A> collectColumn(Collection<R> collection,
                                              Function<R, A> function) {
@@ -55,7 +53,6 @@ public class LambdaUtils {
    * @param collection List<User>
    * @param predicate  user -> user.getAge()>10,
    * @param function   User::getName
-   * @return
    */
   public static <R, A> List<A> collectColumn(Collection<R> collection,
                                              Predicate<R> predicate,
@@ -76,7 +73,6 @@ public class LambdaUtils {
    *
    * @param collection List<User>
    * @param function   User::getName
-   * @return
    */
   public static <R, A> List<A> collectDistinctColumn(Collection<R> collection,
                                                      Function<R, A> function) {
@@ -96,7 +92,6 @@ public class LambdaUtils {
    * @param collection List<User>
    * @param predicate  -> user.getAge()>10,
    * @param function   User::getName
-   * @return
    */
   public static <R, A> List<A> collectDistinctColumn(Collection<R> collection,
                                                      Predicate<R> predicate,
@@ -188,7 +183,6 @@ public class LambdaUtils {
    * @param keyMapper     字段User::getId
    * @param valMapper     字段User::getName
    * @param mergeFunction (k2, k1) -> k2
-   * @return
    */
   public static <R, K, V> Map<K, V> toMap(Collection<R> collection,
                                           Function<R, K> keyMapper,
@@ -274,7 +268,6 @@ public class LambdaUtils {
    *
    * @param collection 指定集合数据
    * @param delimiter  拼接符
-   * @return
    */
   public static String union(Collection<String> collection, String delimiter) {
     if (CollectionUtils.isEmpty(collection)) {
@@ -300,7 +293,6 @@ public class LambdaUtils {
    * @param delimiter  拼接符
    * @param prefix     前缀符号
    * @param suffix     后缀符号
-   * @return
    */
   public static String union(Collection<String> collection,
                              String delimiter,
@@ -318,7 +310,6 @@ public class LambdaUtils {
    *
    * @param collection
    * @param delimiter
-   * @return
    */
   public static String unionNotEmptyString(Collection<String> collection, String delimiter) {
     if (CollectionUtils.isEmpty(collection)) {
@@ -406,8 +397,6 @@ public class LambdaUtils {
    *
    * @param collection List<Channel>
    * @param function   Channel::getStarMinLevel
-   * @param <R>
-   * @return
    */
   public static <R> int getMin(Collection<R> collection,
                                ToIntFunction<R> function) {

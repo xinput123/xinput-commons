@@ -16,7 +16,6 @@ import java.util.List;
 
 /**
  * @author <a href="mailto:xinput.xx@gmail.com">xinput</a>
- * @date 2019-09-27 11:21
  */
 public class FileHelper {
 
@@ -25,8 +24,6 @@ public class FileHelper {
    *
    * @param jsonFileName 文件名
    * @param clazz        类型
-   * @param <T>
-   * @return
    * @throws IOException
    */
   public static <T> T readFileBean(String jsonFileName, Class<T> clazz) throws IOException {
@@ -51,7 +48,6 @@ public class FileHelper {
    *
    * @param fileName 文件名
    * @param size     内容行数
-   * @return
    */
   public static List<String> readFile(String fileName, int size) {
     List<String> lists = Lists.newArrayListWithCapacity(size);
@@ -91,8 +87,6 @@ public class FileHelper {
    * @param csvFileName
    * @param skipRowNum  跳过多少行
    * @param delimiter   分隔符
-   * @param clazz
-   * @return
    */
   public static <T> List<T> readCsv(String csvFileName, int skipRowNum, String delimiter, Class<T> clazz) {
     BeanListProcessor<T> rowProcessor = new BeanListProcessor<>(clazz);

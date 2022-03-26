@@ -25,7 +25,6 @@ import java.util.List;
  * 带连接池的HTTP工具，支持get/post，及指定编码。
  *
  * @author yunjie.du
- * @date 2015年12月2日 下午7:56:21
  */
 public class SimpleHttpUtils {
 
@@ -35,10 +34,6 @@ public class SimpleHttpUtils {
 
   /**
    * GET方式获取url数据 返回数据编码使用自动探测
-   *
-   * @param url
-   * @return
-   * @throws IOException
    */
   public static String get(String url) throws IOException {
     return get(url, null);
@@ -49,8 +44,6 @@ public class SimpleHttpUtils {
    *
    * @param url
    * @param charset 对方url页面的编码，不为null可以免去自动探测的性能消耗，如果为null，则使用自动探测
-   * @return
-   * @throws IOException
    */
   public static String get(String url, String charset) throws IOException {
     HttpGet get = new HttpGet(url);
@@ -60,10 +53,7 @@ public class SimpleHttpUtils {
   /**
    * post数据到url 返回数据编码使用自动探测
    *
-   * @param url
    * @param nvps 参数
-   * @return
-   * @throws IOException
    */
   public static String post(String url, List<NameValuePair> nvps) throws IOException {
     return post(url, nvps, null);
@@ -75,8 +65,6 @@ public class SimpleHttpUtils {
    * @param url
    * @param nvps    参数
    * @param charset 对方url页面的编码，不为null可以免去自动探测的性能消耗，如果为null，则使用自动探测
-   * @return
-   * @throws IOException
    */
   public static String post(String url, List<NameValuePair> nvps, String charset) throws IOException {
     HttpPost httpost = new HttpPost(url);

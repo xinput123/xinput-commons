@@ -4,7 +4,6 @@ package io.github.xinput.commons;
  * 数据脱敏
  *
  * @author xinput
- * @date 2020-06-11 13:09
  */
 public class DesensitizeHelper {
 
@@ -20,9 +19,6 @@ public class DesensitizeHelper {
 
   /**
    * 【中文姓名】只显示第一个汉字，其他隐藏为2个星号，比如：李**
-   *
-   * @param fullName
-   * @return
    */
   public static String name(String fullName) {
     if (StringHelper.isBlank(fullName)) {
@@ -34,9 +30,6 @@ public class DesensitizeHelper {
 
   /**
    * 脱敏手机号码
-   *
-   * @param phone
-   * @return
    */
   public static final String phone(String phone) {
     boolean checkFlag = ValidHelper.phone(phone);
@@ -50,9 +43,6 @@ public class DesensitizeHelper {
    * 脱敏身份证号码
    * 15位：前六位，后三位
    * 18位：前六位，后四位
-   *
-   * @param idCard
-   * @return
    */
   public static final String idCard(String idCard) {
     if (StringHelper.isBlank(idCard)) {

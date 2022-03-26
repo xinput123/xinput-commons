@@ -24,7 +24,6 @@ import java.io.Writer;
 
 /**
  * @author <a href="mailto:xinput.xx@gmail.com">xinput</a>
- * @date 2020-09-15 17:40
  */
 public class XStreamInitializer {
   private static final XppDriver XPP_DRIVER = new XppDriver() {
