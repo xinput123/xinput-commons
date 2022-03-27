@@ -3,7 +3,7 @@ package com.github.xinput.commons.domain;
 import java.io.Serializable;
 
 /**
- * @author yuan.lai
+ * @author <a href="mailto:xinput.xx@gmail.com">xinput</a>
  * @version 1.0
  * @date 2021/7/2 08:19
  * @description

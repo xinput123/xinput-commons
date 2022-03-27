@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * @author xinput
+ * @author <a href="mailto:xinput.xx@gmail.com">xinput</a>
  * @version 1.0
  */
 public class LambdaUtils {

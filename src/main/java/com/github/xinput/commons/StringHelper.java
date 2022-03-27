@@ -5,7 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * String 工具类
  *
- * @author yuan.lai
+ * @author <a href="mailto:xinput.xx@gmail.com">xinput</a>
  * @since
  */
 public class StringHelper extends StringUtils {

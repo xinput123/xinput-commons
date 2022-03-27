@@ -3,7 +3,7 @@ package com.github.xinput.commons.consts;
 /**
  * redis配置文件
  *
- * @author xinput
+ * @author <a href="mailto:xinput.xx@gmail.com">xinput</a>
  */
 public class RedisConsts {
   public static final String CONF_FILE = "redis.properties";

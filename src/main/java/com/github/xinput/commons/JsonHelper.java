@@ -32,7 +32,7 @@ import java.util.Map;
 import java.util.TimeZone;
 
 /**
- * @author yuan.lai
+ * @author <a href="mailto:xinput.xx@gmail.com">xinput</a>
  * @since
  */
 public class JsonHelper {

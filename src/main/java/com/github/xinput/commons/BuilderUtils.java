@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 /**
- * @author xinput
+ * @author <a href="mailto:xinput.xx@gmail.com">xinput</a>
  * @date 2020-02-12 18:05
  * @since java 1.8
  * <p>

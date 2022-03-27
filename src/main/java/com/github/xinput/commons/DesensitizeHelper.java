@@ -3,7 +3,7 @@ package com.github.xinput.commons;
 /**
  * 数据脱敏
  *
- * @author xinput
+ * @author <a href="mailto:xinput.xx@gmail.com">xinput</a>
  */
 public class DesensitizeHelper {
 

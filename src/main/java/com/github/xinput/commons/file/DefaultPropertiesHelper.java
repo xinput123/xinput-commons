@@ -24,7 +24,7 @@ import java.util.Map;
 /**
  * 读取默认配置文件 - default.properties
  *
- * @author yuan.lai
+ * @author <a href="mailto:xinput.xx@gmail.com">xinput</a>
  * @since
  */
 public class DefaultPropertiesHelper {

@@ -8,8 +8,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
- * @author xinput
  * LocalTime 工具类
+ *
+ * @author <a href="mailto:xinput.xx@gmail.com">xinput</a>
  */
 public class LocalTimeUtils {
 

@@ -6,10 +6,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * TODO
+ * {@link DefaultPropertiesHelper} 示例
  *
- * @author yuan.lai
- * @since
+ * @author <a href="mailto:xinput.xx@gmail.com">xinput</a>
  */
 public class DefaultPropertiesHelperDemo {
 

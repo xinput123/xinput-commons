@@ -15,8 +15,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
- * @author xinput
  * Date工具类 工具类
+ *
+ * @author <a href="mailto:xinput.xx@gmail.com">xinput</a>
  */
 public class DateUtils extends DateFormatUtils {
 
