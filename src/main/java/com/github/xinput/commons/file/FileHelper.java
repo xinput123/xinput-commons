@@ -9,9 +9,12 @@ import com.univocity.parsers.csv.CsvParser;
 import com.univocity.parsers.csv.CsvParserSettings;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.List;
 
 /**
@@ -99,5 +102,37 @@ public class FileHelper {
     CsvParser parser = new CsvParser(parserSettings);
     parser.parse(new File(csvFileName), "UTF-8");
     return rowProcessor.getBeans();
+  }
+
+
+  /**
+   * 将list集合文件写入文本
+   *
+   * @param lists
+   * @param file
+   * @return
+   * @throws Exception
+   */
+  public static boolean writeFile(List<String> lists, String file) throws Exception {
+    File writeFile = new File(file);
+
+    try {
+      // 写入中文时解决中文乱码问题
+      FileOutputStream fos = new FileOutputStream(writeFile);
+      OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8");
+      BufferedWriter bw = new BufferedWriter(osw);
+
+      for (String message : lists) {
+        bw.write(message);
+        bw.newLine(); // 换行
+      }
+      bw.flush();
+      bw.close();
+      fos.close();
+    } catch (Exception e) {
+      throw e;
+    }
+    return true;
+
   }
 }
