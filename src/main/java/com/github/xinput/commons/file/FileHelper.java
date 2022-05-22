@@ -7,6 +7,8 @@ import com.google.common.io.Files;
 import com.univocity.parsers.common.processor.BeanListProcessor;
 import com.univocity.parsers.csv.CsvParser;
 import com.univocity.parsers.csv.CsvParserSettings;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -21,6 +23,8 @@ import java.util.List;
  * @author <a href="mailto:xinput.xx@gmail.com">xinput</a>
  */
 public class FileHelper {
+
+  private static final Logger logger = LoggerFactory.getLogger(FileHelper.class);
 
   /**
    * 读取json文件
@@ -54,17 +58,14 @@ public class FileHelper {
    */
   public static List<String> readFile(String fileName, int size) {
     List<String> lists = Lists.newArrayListWithCapacity(size);
-    BufferedReader reader;
-    try {
-      reader = new BufferedReader(new FileReader(fileName));
+    try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
       String line = reader.readLine();
       while (line != null) {
         lists.add(line);
         line = reader.readLine();
       }
-      reader.close();
     } catch (IOException e) {
-      e.printStackTrace();
+      logger.error("readFile error. fileName:{}.", fileName, e);
     }
     return lists;
   }
@@ -113,26 +114,21 @@ public class FileHelper {
    * @return
    * @throws Exception
    */
-  public static boolean writeFile(List<String> lists, String file) throws Exception {
+  public static void writeFile(List<String> lists, String file) throws Exception {
     File writeFile = new File(file);
 
-    try {
-      // 写入中文时解决中文乱码问题
-      FileOutputStream fos = new FileOutputStream(writeFile);
-      OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8");
-      BufferedWriter bw = new BufferedWriter(osw);
-
+    try (// 写入中文时解决中文乱码问题
+         FileOutputStream fos = new FileOutputStream(writeFile);
+         OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8");
+         BufferedWriter bw = new BufferedWriter(osw)) {
       for (String message : lists) {
         bw.write(message);
         bw.newLine(); // 换行
       }
       bw.flush();
-      bw.close();
-      fos.close();
     } catch (Exception e) {
+      logger.error("writeFile error. file:{}.", file, e);
       throw e;
     }
-    return true;
-
   }
 }
