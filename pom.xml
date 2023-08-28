@@ -6,8 +6,8 @@
 
     <groupId>com.github.xinput123</groupId>
     <artifactId>xinput-commons</artifactId>
-<!--    <version>0.1.0</version>-->
-    <version>0.1.1-SNAPSHOT</version>
+    <version>0.1.1</version>
+<!--    <version>0.1.1-SNAPSHOT</version>-->
 
     <name>xinput-commons</name>
     <description>常用工具类封装</description>
@@ -253,7 +253,6 @@
                             <charset>UTF-8</charset>
                             <additionalparam>-Xdoclint:none</additionalparam>
                         </configuration>
-
                     </execution>
                 </executions>
             </plugin>
